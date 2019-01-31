@@ -1,0 +1,33 @@
+version: '3'
+
+services: 
+  
+  mysql:
+     image: mysql:5.7
+     container_name: "mysql"
+     command: mysqld --user=root
+     volumes:
+       - ./db:/docker-entrypoint-initdb.d
+     ports:
+       - "3306:3306"
+     expose:
+      - "3306"
+     environment:
+       MYSQL_DATABASE: phoenix
+       MYSQL_USER: user
+       MYSQL_PASSWORD: 123456
+       MYSQL_ROOT_PASSWORD: 123456
+  back:
+    container_name: "backend"
+    build: ./backend
+    volumes:
+      - "./backend/code:/go/src/github.com/damillano93/usuarios"
+    ports:
+      - "8080:8080"
+  front:
+    container_name: "frontend"
+    build: ./frontend
+    volumes:
+      - "./frontend/code:/angular/code"
+    ports:
+      - "4200:4200"
