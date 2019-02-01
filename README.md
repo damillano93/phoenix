@@ -10,9 +10,7 @@ _aplicación de gestión  de usuarios_
 
 _docker_
 _docker-compose_
-```
-Da un ejemplo
-```
+
 
 ### Instalación 🔧
 
@@ -27,7 +25,7 @@ _entrar carpeta_
 ```
 cd phoenix 
 ```
-_ejecutar proyecto _
+_ejecutar proyecto_
 
 ```
 docker-compose up 
