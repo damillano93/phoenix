@@ -1,0 +1,24 @@
+
+<h2>Usuarios</h2>
+<p-confirmDialog header="Confirmation" icon="fa fa-question-circle" width="425" #cd>
+  <p-footer>
+    <button type="button" pButton icon="fa-close" label="No" (click)="cd.reject()"></button>
+    <button type="button" pButton icon="fa-check" label="Si" (click)="cd.accept()"></button>
+  </p-footer>
+</p-confirmDialog>
+<p-dataTable [value]="usuarioss">
+  <p-column field="Ciudad" header="Ciudad" [sortable]="true"></p-column>
+  <p-column field="Direccion" header="Direccion" [sortable]="true"></p-column>
+  <p-column field="Email" header="Email" [sortable]="true"></p-column>
+  <p-column field="Nombre" header="Nombre" [sortable]="true"></p-column>
+  <p-column field="Pais" header="Pais" [sortable]="true"></p-column>
+  <p-column field="Password" header="Password" [sortable]="true"></p-column>
+  <p-column field="Telefono" header="Telefono" [sortable]="true"></p-column>
+<p-column field="" header="Acciones">
+    <ng-template let-col let-registro="rowData" pTemplate="body">
+      <button pButton icon="fa-close" type="button" (click)="borrar(registro)"></button>
+      <button pButton icon="fa-edit" type="button" (click)="editar(registro)"></button>
+    </ng-template>
+  </p-column>
+</p-dataTable>
+<button class="accept" pButton type="button" label="Crear Usuarios" (click)="newUsuarios()"></button>
