@@ -39,7 +39,7 @@ _la base de datos se ejecuta en el puerto 3306_
 
 ## API beego  ⚙️
 
-_La API se ejecuta en el puerto 8080_
+_La API se ejecuta en el puerto 8080 y para ver la documentación diríjase a la ruta /swagger_
 
 ## Cliente Angular4  ⚙️
 
