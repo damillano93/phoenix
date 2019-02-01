@@ -67,7 +67,7 @@ godog
 
 
 * **David MIllan** - *Trabajo Inicial* - [damillano93](https://github.com/damillano93)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
+
 
 
 
